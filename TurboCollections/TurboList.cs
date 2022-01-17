@@ -17,12 +17,16 @@
             //assign the new Element
             newArray[Count] = item;
 
-            //assign the result to our Field
+            //assign the result to our field
             items = newArray;
         }
 
         public T Get(int index) {
             return items[index];
+        }
+
+        public void Clear() {
+            items = Array.Empty<T>();
         }
     }
 }
