@@ -1,6 +1,5 @@
 ﻿namespace TurboCollections {
-    public class TurboList<T>
-    {
+    public class TurboList<T> {
         public int Count => items.Length;
         T[] items = Array.Empty<T>();
 

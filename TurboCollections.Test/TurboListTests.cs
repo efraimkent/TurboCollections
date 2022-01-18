@@ -64,7 +64,7 @@ namespace TurboCollections.Test {
         }
 
         [Test]
-        public void ReturnIndexIndexOf() {
+        public void ReturnIndexOf() {
             var list = new TurboList<int>();
             list.Add(11);
             list.Add(32);
