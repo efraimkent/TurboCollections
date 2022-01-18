@@ -3,10 +3,6 @@
         public int Count => items.Length;
         T[] items = Array.Empty<T>();
 
-        public TurboList() {
-            Console.WriteLine("Hello, Turbo!");
-        }
-
         public void Add(T item) {
 
             //resize the Array
@@ -61,6 +57,16 @@
                 i++;
             }
             return -1;
+        }
+
+        public void Remove(T item) {
+            T[] newArray = new T[Count];
+            foreach (var elements in items) {
+                if (elements.Equals(item)) {
+                    newArray[Count] = item;
+                }
+            }
+            Console.WriteLine(string.Join(",", newArray));
         }
     }
 }

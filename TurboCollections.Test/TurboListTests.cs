@@ -73,5 +73,18 @@ namespace TurboCollections.Test {
             list.Add(90);
             Assert.AreEqual(2, list.IndexOf(56));
         }
+
+        [Test]
+        public void RemoveSpecifiedItemAtIndex() {
+            var list = new TurboList<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            list.Add(6);
+            list.Remove(3);
+            Assert.AreEqual(4, 2);
+        }
     }
 }
