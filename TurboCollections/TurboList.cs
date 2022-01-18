@@ -3,6 +3,17 @@
         public int Count => items.Length;
         T[] items = Array.Empty<T>();
 
+        void EnsureSize(int size) {
+            if (items.Length >= size)
+                return;
+            int newSize = Math.Max(size, items.Length * 2);
+            T[] newArray = new T[newSize];
+            for (int i = 0; i < Count; i++) {
+                newArray[i] = items[i];
+            }
+            items = newArray;
+        }
+
         public void Add(T item) {
 
             //resize the Array
